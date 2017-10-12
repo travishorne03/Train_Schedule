@@ -54,6 +54,9 @@ $("#add-user").on("click",function(event) {
 
 //var calculation time
 
+
+
+
 //database.ref().on("child_added".function(snapshot) - adds new row to table
 
 dataRef.ref().on("child_added",function(childSnapshot){
@@ -62,14 +65,16 @@ console.log(childSnapshot.val().trainName)
 console.log(childSnapshot.val().destination)
 console.log(childSnapshot.val().trainTime)
 console.log(childSnapshot.val().frequency)
+console.log(childSnapshot.val().arrival)
+console.log(childSnapshot.val().away)
+
+
 
 
 })
 
 
-//Delete train button
 
-//Edit train button- child.data
 
 //Play some music at the end 
 })
