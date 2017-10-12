@@ -68,6 +68,9 @@ console.log(childSnapshot.val().frequency)
 console.log(childSnapshot.val().arrival)
 console.log(childSnapshot.val().away)
 
+newRW = $<"tr">
+$("#dispv").append(newRW);
+newRW.append("<td>" + childSnapshot.val().trainName + "</td>");
 
 
 
