@@ -6,6 +6,23 @@
        
 }
 
-h1 {
-    font-size: 50%;
+#h1 {
+    font-size: 90%;
 }
+
+
+
+body { 
+    background: url(http://l7.alamy.com/zooms/0032105f87b24014aeabc3abf7827577/modern-metro-station-crystal-city-washington-dc-usa-america-crdjj3.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+
+  .card {
+      background-color: rgba(235, 219, 219, 0.904)
+    
+
+  }

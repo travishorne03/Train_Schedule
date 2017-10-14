@@ -23,8 +23,9 @@ $("#add-user").on("click",function(event) {
   var trainName = $("#name-display").val().trim();
   var destination = $("#destination-display").val().trim();
   var trainTime = moment($("#start-display").val().trim(), "HH:mm").format("HH:mm a");
+  console.log(trainTime);
   var frequency = moment($("#frequency-display").val().trim(), "mm").format("mm");
-console.log(frequency);
+  
   //var calculation time
   
   var formated = moment(trainTime, "hh:mm").subtract(1, "years");
@@ -34,6 +35,7 @@ console.log(frequency);
   var apart = diff % frequency;
   console.log(apart);
   var away = frequency - apart;
+  console.log(away)
 
   var arrival = moment().add(away, "minutes").format("hh:mm");
 
@@ -74,7 +76,7 @@ database.ref().on("child_added",function(childSnapshot, prevChildKey){
   var trainName= childSnapshot.val().name;
   var destination = childSnapshot.val().destination;
   var trainTime = childSnapshot.val().time;
-  var frequency = childSnapshot.val().frequency;
+  var frequency = childSnapshot.val().freq;
   var arrival = childSnapshot.val().arrival;
  var away = childSnapshot.val().away;
 
@@ -82,7 +84,7 @@ database.ref().on("child_added",function(childSnapshot, prevChildKey){
 console.log(childSnapshot.val().name)
 console.log(childSnapshot.val().destination)
 console.log(childSnapshot.val().time)
-console.log(childSnapshot.val().freq)
+console.log(frequency);
 console.log(childSnapshot.val().arrival)
 console.log(childSnapshot.val().away)
 
