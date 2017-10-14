@@ -84,7 +84,8 @@ database.ref().on("child_added",function(childSnapshot, prevChildKey){
 console.log(childSnapshot.val().name)
 console.log(childSnapshot.val().destination)
 console.log(childSnapshot.val().time)
-console.log(frequency);
+console.log(childSnapshot.val().freq)
+//console.log(frequency);
 console.log(childSnapshot.val().arrival)
 console.log(childSnapshot.val().away)
 
